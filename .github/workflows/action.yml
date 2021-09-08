@@ -1,0 +1,21 @@
+name: Test Action
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  local:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: With sudo
+        uses: ./
+        with:
+          playbook: playbook.yml
+          directory: test
+          sudo: true
+          options: --inventory hosts
