@@ -3,7 +3,7 @@
   tasks:
     - name: Copy file
       copy:
-        src: files/requirements.yml
+        src: ../files/requirements.yml
         dest: /tmp/requirements.yml
     - name: Install cowsay
       become: yes
