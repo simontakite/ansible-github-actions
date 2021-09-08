@@ -10,8 +10,8 @@ on:
   workflow_dispatch: { }
 
 jobs:
-  local:
-    - name: Run playbook
+  playbook:
+    - name: 'Run playbook'
       uses: dawidd6/action-ansible-playbook@v2
       with:
         # Optional, directory where playbooks live
